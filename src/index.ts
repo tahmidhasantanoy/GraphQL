@@ -15,15 +15,27 @@ const typeDefs = `#graphql
     rating: Float,
   }
 
-
   type Query {
-    products: [ProductSchema]
+    # query1
+    products: [ProductSchema],
+    # query2
+    singleProduct(p_id : ID!): ProductSchema
   }
 `;
 
+
+// A resolver is a function that fetches the requested data.
 const resolvers = {
   Query: {
+    // resolver function 1
     products: () => allProducts,
+    // resolver function 2
+    singleProduct: (parent : any, args : {p_id : number}, context : any) => {
+        console.log(parent, args , context);
+        const queryData = allProducts.find( (item) => item.id == args.p_id)
+        console.log(queryData);
+        return queryData;
+    }
   },
 };
 
