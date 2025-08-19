@@ -9,6 +9,8 @@ export const typeDefs = `#graphql
     category: String,
     inStock: Boolean,
     rating: Float,
+    categoryId: ID
+    categoryDetails: categorySchema
   }
 
   type categorySchema {
@@ -17,6 +19,7 @@ export const typeDefs = `#graphql
     } #ok
 
 
+  # Any field listed inside this Query type is considered a "root field" and can be the starting point of a request.
   type Query {
     # query1
     products: [ProductSchema],

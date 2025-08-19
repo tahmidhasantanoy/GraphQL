@@ -8,7 +8,7 @@ const allProducts = [
     "category": "Electronics",
     "inStock": true,
     "rating": 4.5,
-    
+    "categoryId": 1
   },
   {
     "id": 2,
@@ -16,10 +16,10 @@ const allProducts = [
     "description": "High-performance laptop with Intel i7, 16GB RAM, and RTX 3060 GPU.",
     "price": 1199.99,
     "currency": "USD",
-    "category": "Computers",
+    "category": "Computers", // Note: The category "Computers" is not in the categories array.
     "inStock": false,
     "rating": 4.7,
-    
+    "categoryId": 1 // Assigned to Electronics as it's the closest fit.
   },
   {
     "id": 3,
@@ -27,10 +27,10 @@ const allProducts = [
     "description": "Programmable coffee machine with auto-shutoff feature.",
     "price": 59.99,
     "currency": "USD",
-    "category": "Home Appliances",
+    "category": "Home Appliances", // Note: "Home Appliances" is not in the categories array.
     "inStock": true,
     "rating": 4.2,
-    
+    "categoryId": 3 // Assigned to Home & Kitchen as it's the closest fit.
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@ const allProducts = [
     "category": "Electronics",
     "inStock": true,
     "rating": 4.6,
-    
+    "categoryId": 1
   },
   {
     "id": 5,
@@ -49,10 +49,10 @@ const allProducts = [
     "description": "1.7L stainless steel electric kettle with auto shut-off.",
     "price": 34.99,
     "currency": "USD",
-    "category": "Home Appliances",
+    "category": "Home Appliances", // Note: "Home Appliances" is not in the categories array.
     "inStock": true,
     "rating": 4.3,
-    
+    "categoryId": 3 // Assigned to Home & Kitchen as it's the closest fit.
   },
   {
     "id": 6,
@@ -60,10 +60,10 @@ const allProducts = [
     "description": "Ergonomic office chair with adjustable height and lumbar support.",
     "price": 149.99,
     "currency": "USD",
-    "category": "Furniture",
+    "category": "Furniture", // Note: "Furniture" is not in the categories array.
     "inStock": false,
     "rating": 4.4,
-    
+    "categoryId": null // No direct match, so categoryId is null.
   },
   {
     "id": 7,
@@ -71,10 +71,10 @@ const allProducts = [
     "description": "Waterproof smartwatch with fitness tracking and heart-rate monitor.",
     "price": 199.99,
     "currency": "USD",
-    "category": "Wearables",
+    "category": "Wearables", // Note: "Wearables" is not in the categories array.
     "inStock": true,
     "rating": 4.1,
-    
+    "categoryId": 1 // Assigned to Electronics as it's the closest fit.
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@ const allProducts = [
     "category": "Electronics",
     "inStock": true,
     "rating": 4.5,
-    
+    "categoryId": 1
   },
   {
     "id": 9,
@@ -93,10 +93,10 @@ const allProducts = [
     "description": "Durable travel backpack with multiple compartments and laptop sleeve.",
     "price": 54.99,
     "currency": "USD",
-    "category": "Accessories",
+    "category": "Accessories", // Note: "Accessories" is not in the categories array.
     "inStock": true,
     "rating": 4.0,
-    
+    "categoryId": null // No direct match, so categoryId is null.
   },
   {
     "id": 10,
@@ -104,59 +104,57 @@ const allProducts = [
     "description": "27-inch Full HD monitor with 144Hz refresh rate.",
     "price": 229.99,
     "currency": "USD",
-    "category": "Computers",
+    "category": "Computers", // Note: "Computers" is not in the categories array.
     "inStock": false,
     "rating": 4.6,
-    
+    "categoryId": 1 // Assigned to Electronics as it's the closest fit.
   }
-]
+];
 
-/* Now we create data for practicing the graphQL */
 const categories = [
-    {
-      "name": "Electronics",
-      "id": 1
-    },
-    {
-      "name": "Books",
-      "id": 2
-    },
-    {
-      "name": "Home & Kitchen",
-      "id": 3
-    },
-    {
-      "name": "Clothing",
-      "id": 4
-    },
-    {
-      "name": "Sports & Outdoors",
-      "id": 5
-    },
-    {
-      "name": "Beauty & Personal Care",
-      "id": 6
-    },
-    {
-      "name": "Toys & Games",
-      "id": 7
-    },
-    {
-      "name": "Health & Household",
-      "id": 8
-    },
-    {
-      "name": "Automotive",
-      "id": 9
-    },
-    {
-      "name": "Pet Supplies",
-      "id": 10
-    }
-  ]
-
+  {
+    "name": "Electronics",
+    "id": 1
+  },
+  {
+    "name": "Books",
+    "id": 2
+  },
+  {
+    "name": "Home & Kitchen",
+    "id": 3
+  },
+  {
+    "name": "Clothing",
+    "id": 4
+  },
+  {
+    "name": "Sports & Outdoors",
+    "id": 5
+  },
+  {
+    "name": "Beauty & Personal Care",
+    "id": 6
+  },
+  {
+    "name": "Toys & Games",
+    "id": 7
+  },
+  {
+    "name": "Health & Household",
+    "id": 8
+  },
+  {
+    "name": "Automotive",
+    "id": 9
+  },
+  {
+    "name": "Pet Supplies",
+    "id": 10
+  }
+];
 
 export const db = {
   allProducts,
   categories
-}
+};
