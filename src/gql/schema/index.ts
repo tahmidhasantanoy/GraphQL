@@ -11,10 +11,17 @@ export const typeDefs = `#graphql
     rating: Float,
   }
 
+  type categorySchema {
+      name: String,
+      id: ID
+    },
+
   type Query {
     # query1
     products: [ProductSchema],
     # query2
-    singleProduct(p_id : ID!): ProductSchema
+    singleProduct(p_id : ID!): ProductSchema,
+    #query3
+    categories: [categorySchema]
   }
 `;

@@ -1,4 +1,4 @@
-export const allProducts = [
+const allProducts = [
   {
     "id": 1,
     "name": "Wireless Headphones",
@@ -110,3 +110,53 @@ export const allProducts = [
     
   }
 ]
+
+/* Now we create data for practicing the graphQL */
+const categories = [
+    {
+      "name": "Electronics",
+      "id": 1
+    },
+    {
+      "name": "Books",
+      "id": 2
+    },
+    {
+      "name": "Home & Kitchen",
+      "id": 3
+    },
+    {
+      "name": "Clothing",
+      "id": 4
+    },
+    {
+      "name": "Sports & Outdoors",
+      "id": 5
+    },
+    {
+      "name": "Beauty & Personal Care",
+      "id": 6
+    },
+    {
+      "name": "Toys & Games",
+      "id": 7
+    },
+    {
+      "name": "Health & Household",
+      "id": 8
+    },
+    {
+      "name": "Automotive",
+      "id": 9
+    },
+    {
+      "name": "Pet Supplies",
+      "id": 10
+    }
+  ]
+
+
+export const db = {
+  allProducts,
+  categories
+}
