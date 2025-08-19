@@ -30,6 +30,6 @@ export const typeDefs = `#graphql
     # query3
     categories: [categorySchema]
     # query4
-    category(c_id : ID): categorySchema #ok
+    category(c_id : ID): categorySchema
   }
 `;
