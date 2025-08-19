@@ -14,14 +14,17 @@ export const typeDefs = `#graphql
   type categorySchema {
       name: String,
       id: ID
-    },
+    } #ok
+
 
   type Query {
     # query1
     products: [ProductSchema],
     # query2
-    singleProduct(p_id : ID!): ProductSchema,
-    #query3
-    categories: [categorySchema]
+    singleProduct(p_id : ID!): ProductSchema
+    # query3
+    categories: [categorySchema] #ok
+    # query4
+    category(c_id : ID): categorySchema #ok
   }
 `;

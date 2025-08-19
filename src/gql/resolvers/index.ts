@@ -11,7 +11,20 @@ export const resolvers = {
         console.log(queryData);
         return queryData;
     },
-    // resolver function for categories
-    categories /* name from schema */ : () => db.categories
+
+
+    /* 
+      query cat($pId: ID!) {
+  singleProduct(p_id: $pId) {
+    
+  }
+}
+    */
+    categories : () => db.categories, // OK
+    category: (parent : any, args : {c_id : number}, context : any) => {
+        const queryData = db.categories.find( (item) => item.id == args.c_id)
+        console.log(queryData);
+        return queryData;
+    },
   },
 };
