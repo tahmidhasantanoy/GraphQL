@@ -154,7 +154,116 @@ const categories = [
   }
 ];
 
+const reviews = [
+  {
+    "id": 1,
+    "review": "Great sound quality and comfortable fit. The noise-cancelling feature works like a charm.",
+    "rating": 5,
+    "date": "2023-04-15",
+    "productId": 1
+  },
+  {
+    "id": 2,
+    "review": "A beast for gaming! Handles all my favorite titles on high settings without any issues.",
+    "rating": 5,
+    "date": "2023-03-20",
+    "productId": 2
+  },
+  {
+    "id": 3,
+    "review": "Solid coffee maker for the price. The programmable feature is very convenient for busy mornings.",
+    "rating": 4,
+    "date": "2023-05-10",
+    "productId": 3
+  },
+  {
+    "id": 4,
+    "review": "Impressive display and camera. The battery life is also better than expected.",
+    "rating": 5,
+    "date": "2023-06-01",
+    "productId": 4
+  },
+  {
+    "id": 5,
+    "review": "Heats up water very quickly and the auto shut-off is a great safety feature.",
+    "rating": 4,
+    "date": "2023-07-05",
+    "productId": 5
+  },
+  {
+    "id": 6,
+    "review": "Comfortable for long hours, but the lumbar support could be better. A good chair for the price.",
+    "rating": 4,
+    "date": "2023-04-22",
+    "productId": 6
+  },
+  {
+    "id": 7,
+    "review": "The fitness tracking is accurate and the watch is lightweight. A good entry-level smartwatch.",
+    "rating": 4,
+    "date": "2023-05-25",
+    "productId": 7
+  },
+  {
+    "id": 8,
+    "review": "Excellent sound for a portable speaker. Very durable and the battery lasts a long time.",
+    "rating": 5,
+    "date": "2023-06-18",
+    "productId": 8
+  },
+  {
+    "id": 9,
+    "review": "Perfect for travel. Fits my laptop and has plenty of space for other items.",
+    "rating": 4,
+    "date": "2023-07-01",
+    "productId": 9
+  },
+  {
+    "id": 10,
+    "review": "Great for gaming with the high refresh rate. The colors are vibrant and sharp.",
+    "rating": 5,
+    "date": "2023-05-30",
+    "productId": 10
+  },
+  {
+    "id": 11,
+    "review": "The battery life is amazing, and it charges so fast! I use it every day for my commute.",
+    "rating": 5,
+    "date": "2023-08-01",
+    "productId": 1
+  },
+  {
+    "id": 12,
+    "review": "I was hesitant because of the price, but it's worth every penny. The performance is top-notch.",
+    "rating": 5,
+    "date": "2023-08-05",
+    "productId": 2
+  },
+  {
+    "id": 13,
+    "review": "Simple to use and makes a decent cup of coffee. No complaints so far.",
+    "rating": 4,
+    "date": "2023-08-10",
+    "productId": 3
+  },
+  {
+    "id": 14,
+    "review": "The camera quality is incredible, especially in low light. So happy with this purchase.",
+    "rating": 5,
+    "date": "2023-08-15",
+    "productId": 4
+  },
+  {
+    "id": 15,
+    "review": "I've been looking for a reliable kettle, and this one is perfect. Highly recommend!",
+    "rating": 5,
+    "date": "2023-08-18",
+    "productId": 5
+  }
+];
+
 export const db = {
   allProducts,
-  categories
+  categories,
+  reviews
 };

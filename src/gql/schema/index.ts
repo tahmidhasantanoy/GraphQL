@@ -11,6 +11,7 @@ export const typeDefs = `#graphql
     rating: Float,
     categoryId: ID
     categoryDetails: categorySchema
+    reviews: [reviewSchema]
   }
 
   type categorySchema {
@@ -20,6 +21,13 @@ export const typeDefs = `#graphql
       # a specific category can have multiple products | only one product | no product
     }
 
+    type reviewSchema {
+      id: ID,
+      review: String,
+      rating: Float,
+      date: String,
+      productId: ID
+    }
 
   # Any field listed inside this Query type is considered a "root field" and can be the starting point of a request.
   type Query {

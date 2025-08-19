@@ -8,7 +8,7 @@ export const resolvers = {
     // resolver function 2
     singleProduct: (parent: any, args: { p_id: number }, context: any) => {
       const queryData = db.allProducts.find((item) => item.id == args.p_id);
-      console.log(queryData);
+      // console.log(queryData);
       return queryData;
     },
     /* 
@@ -22,7 +22,7 @@ export const resolvers = {
     // This resolver finds a specific category by ID
     category: (parent: any, args: { c_id: number }, context: any) => {
       const queryData = db.categories.find((item) => item.id == args.c_id);
-      console.log(queryData);
+      // console.log(queryData);
       return queryData;
     },
   },
@@ -33,15 +33,20 @@ export const resolvers = {
       // console.log(parent); // allCategories
       // const res = db.categories.find((item) => item.id == parent.categoryId)
       const res = db.allProducts.find((item) => parent.categoryId === item.id);
-      console.log(res);
-      console.log(parent.categoryId, parent.name);
+      // console.log(res);
+      // console.log(parent.categoryId, parent.name);
       return res;
     },
+    reviews : (parent: any, args: any, context: any) => {
+      console.log(parent , "line 41");
+      const res = db.reviews.filter((item) => item.productId == parent.id);
+      return res;
+    }
   },
 
   categorySchema: {
     categoryProducts: (parent: any, args: any, context: any) => {
-      console.log(parent /* { name: 'Electronics', id: 1 } */);
+      // console.log(parent /* { name: 'Electronics', id: 1 } */);
       const res = db.allProducts.filter((item) => item.categoryId == parent.id);
       return res;
     },
